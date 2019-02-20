@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19ABD674221DE5AF00005C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABD673221DE5AF00005C4A /* AppDelegate.swift */; };
+		19ABD676221DE5AF00005C4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABD675221DE5AF00005C4A /* ViewController.swift */; };
+		19ABD679221DE5AF00005C4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19ABD677221DE5AF00005C4A /* Main.storyboard */; };
+		19ABD67B221DE5B000005C4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ABD67A221DE5B000005C4A /* Assets.xcassets */; };
+		19ABD67E221DE5B000005C4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19ABD67C221DE5B000005C4A /* LaunchScreen.storyboard */; };
+		19ABD689221DE5B000005C4A /* Audio_Tech_SpikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABD688221DE5B000005C4A /* Audio_Tech_SpikeTests.swift */; };
+		19ABD694221DE5B000005C4A /* Audio_Tech_SpikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABD693221DE5B000005C4A /* Audio_Tech_SpikeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19ABD685221DE5B000005C4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19ABD668221DE5AF00005C4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19ABD66F221DE5AF00005C4A;
+			remoteInfo = "Audio Tech Spike";
+		};
+		19ABD690221DE5B000005C4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19ABD668221DE5AF00005C4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19ABD66F221DE5AF00005C4A;
+			remoteInfo = "Audio Tech Spike";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19ABD670221DE5AF00005C4A /* Audio Tech Spike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Audio Tech Spike.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ABD673221DE5AF00005C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		19ABD675221DE5AF00005C4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		19ABD678221DE5AF00005C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19ABD67A221DE5B000005C4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19ABD67D221DE5B000005C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		19ABD67F221DE5B000005C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19ABD684221DE5B000005C4A /* Audio Tech SpikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Audio Tech SpikeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ABD688221DE5B000005C4A /* Audio_Tech_SpikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio_Tech_SpikeTests.swift; sourceTree = "<group>"; };
+		19ABD68A221DE5B000005C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19ABD68F221DE5B000005C4A /* Audio Tech SpikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Audio Tech SpikeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19ABD693221DE5B000005C4A /* Audio_Tech_SpikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio_Tech_SpikeUITests.swift; sourceTree = "<group>"; };
+		19ABD695221DE5B000005C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19ABD66D221DE5AF00005C4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ABD681221DE5B000005C4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ABD68C221DE5B000005C4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19ABD667221DE5AF00005C4A = {
+			isa = PBXGroup;
+			children = (
+				19ABD672221DE5AF00005C4A /* Audio Tech Spike */,
+				19ABD687221DE5B000005C4A /* Audio Tech SpikeTests */,
+				19ABD692221DE5B000005C4A /* Audio Tech SpikeUITests */,
+				19ABD671221DE5AF00005C4A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19ABD671221DE5AF00005C4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19ABD670221DE5AF00005C4A /* Audio Tech Spike.app */,
+				19ABD684221DE5B000005C4A /* Audio Tech SpikeTests.xctest */,
+				19ABD68F221DE5B000005C4A /* Audio Tech SpikeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19ABD672221DE5AF00005C4A /* Audio Tech Spike */ = {
+			isa = PBXGroup;
+			children = (
+				19ABD673221DE5AF00005C4A /* AppDelegate.swift */,
+				19ABD675221DE5AF00005C4A /* ViewController.swift */,
+				19ABD677221DE5AF00005C4A /* Main.storyboard */,
+				19ABD67A221DE5B000005C4A /* Assets.xcassets */,
+				19ABD67C221DE5B000005C4A /* LaunchScreen.storyboard */,
+				19ABD67F221DE5B000005C4A /* Info.plist */,
+			);
+			path = "Audio Tech Spike";
+			sourceTree = "<group>";
+		};
+		19ABD687221DE5B000005C4A /* Audio Tech SpikeTests */ = {
+			isa = PBXGroup;
+			children = (
+				19ABD688221DE5B000005C4A /* Audio_Tech_SpikeTests.swift */,
+				19ABD68A221DE5B000005C4A /* Info.plist */,
+			);
+			path = "Audio Tech SpikeTests";
+			sourceTree = "<group>";
+		};
+		19ABD692221DE5B000005C4A /* Audio Tech SpikeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				19ABD693221DE5B000005C4A /* Audio_Tech_SpikeUITests.swift */,
+				19ABD695221DE5B000005C4A /* Info.plist */,
+			);
+			path = "Audio Tech SpikeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19ABD66F221DE5AF00005C4A /* Audio Tech Spike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19ABD698221DE5B000005C4A /* Build configuration list for PBXNativeTarget "Audio Tech Spike" */;
+			buildPhases = (
+				19ABD66C221DE5AF00005C4A /* Sources */,
+				19ABD66D221DE5AF00005C4A /* Frameworks */,
+				19ABD66E221DE5AF00005C4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Audio Tech Spike";
+			productName = "Audio Tech Spike";
+			productReference = 19ABD670221DE5AF00005C4A /* Audio Tech Spike.app */;
+			productType = "com.apple.product-type.application";
+		};
+		19ABD683221DE5B000005C4A /* Audio Tech SpikeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19ABD69B221DE5B000005C4A /* Build configuration list for PBXNativeTarget "Audio Tech SpikeTests" */;
+			buildPhases = (
+				19ABD680221DE5B000005C4A /* Sources */,
+				19ABD681221DE5B000005C4A /* Frameworks */,
+				19ABD682221DE5B000005C4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19ABD686221DE5B000005C4A /* PBXTargetDependency */,
+			);
+			name = "Audio Tech SpikeTests";
+			productName = "Audio Tech SpikeTests";
+			productReference = 19ABD684221DE5B000005C4A /* Audio Tech SpikeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		19ABD68E221DE5B000005C4A /* Audio Tech SpikeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19ABD69E221DE5B000005C4A /* Build configuration list for PBXNativeTarget "Audio Tech SpikeUITests" */;
+			buildPhases = (
+				19ABD68B221DE5B000005C4A /* Sources */,
+				19ABD68C221DE5B000005C4A /* Frameworks */,
+				19ABD68D221DE5B000005C4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19ABD691221DE5B000005C4A /* PBXTargetDependency */,
+			);
+			name = "Audio Tech SpikeUITests";
+			productName = "Audio Tech SpikeUITests";
+			productReference = 19ABD68F221DE5B000005C4A /* Audio Tech SpikeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19ABD668221DE5AF00005C4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Buddy Reno";
+				TargetAttributes = {
+					19ABD66F221DE5AF00005C4A = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					19ABD683221DE5B000005C4A = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 19ABD66F221DE5AF00005C4A;
+					};
+					19ABD68E221DE5B000005C4A = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 19ABD66F221DE5AF00005C4A;
+					};
+				};
+			};
+			buildConfigurationList = 19ABD66B221DE5AF00005C4A /* Build configuration list for PBXProject "Audio Tech Spike" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19ABD667221DE5AF00005C4A;
+			productRefGroup = 19ABD671221DE5AF00005C4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19ABD66F221DE5AF00005C4A /* Audio Tech Spike */,
+				19ABD683221DE5B000005C4A /* Audio Tech SpikeTests */,
+				19ABD68E221DE5B000005C4A /* Audio Tech SpikeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19ABD66E221DE5AF00005C4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ABD67E221DE5B000005C4A /* LaunchScreen.storyboard in Resources */,
+				19ABD67B221DE5B000005C4A /* Assets.xcassets in Resources */,
+				19ABD679221DE5AF00005C4A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ABD682221DE5B000005C4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ABD68D221DE5B000005C4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19ABD66C221DE5AF00005C4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ABD676221DE5AF00005C4A /* ViewController.swift in Sources */,
+				19ABD674221DE5AF00005C4A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ABD680221DE5B000005C4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ABD689221DE5B000005C4A /* Audio_Tech_SpikeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19ABD68B221DE5B000005C4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ABD694221DE5B000005C4A /* Audio_Tech_SpikeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19ABD686221DE5B000005C4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19ABD66F221DE5AF00005C4A /* Audio Tech Spike */;
+			targetProxy = 19ABD685221DE5B000005C4A /* PBXContainerItemProxy */;
+		};
+		19ABD691221DE5B000005C4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19ABD66F221DE5AF00005C4A /* Audio Tech Spike */;
+			targetProxy = 19ABD690221DE5B000005C4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		19ABD677221DE5AF00005C4A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19ABD678221DE5AF00005C4A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		19ABD67C221DE5B000005C4A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19ABD67D221DE5B000005C4A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19ABD696221DE5B000005C4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		19ABD697221DE5B000005C4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19ABD699221DE5B000005C4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25D454MM3P;
+				INFOPLIST_FILE = "Audio Tech Spike/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.daveramsey.audio-tech-spike.Audio-Tech-Spike";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19ABD69A221DE5B000005C4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25D454MM3P;
+				INFOPLIST_FILE = "Audio Tech Spike/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.daveramsey.audio-tech-spike.Audio-Tech-Spike";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		19ABD69C221DE5B000005C4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25D454MM3P;
+				INFOPLIST_FILE = "Audio Tech SpikeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.daveramsey.audio-tech-spike.Audio-Tech-SpikeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Audio Tech Spike.app/Audio Tech Spike";
+			};
+			name = Debug;
+		};
+		19ABD69D221DE5B000005C4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25D454MM3P;
+				INFOPLIST_FILE = "Audio Tech SpikeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.daveramsey.audio-tech-spike.Audio-Tech-SpikeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Audio Tech Spike.app/Audio Tech Spike";
+			};
+			name = Release;
+		};
+		19ABD69F221DE5B000005C4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25D454MM3P;
+				INFOPLIST_FILE = "Audio Tech SpikeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.daveramsey.audio-tech-spike.Audio-Tech-SpikeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Audio Tech Spike";
+			};
+			name = Debug;
+		};
+		19ABD6A0221DE5B000005C4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 25D454MM3P;
+				INFOPLIST_FILE = "Audio Tech SpikeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.daveramsey.audio-tech-spike.Audio-Tech-SpikeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Audio Tech Spike";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19ABD66B221DE5AF00005C4A /* Build configuration list for PBXProject "Audio Tech Spike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ABD696221DE5B000005C4A /* Debug */,
+				19ABD697221DE5B000005C4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19ABD698221DE5B000005C4A /* Build configuration list for PBXNativeTarget "Audio Tech Spike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ABD699221DE5B000005C4A /* Debug */,
+				19ABD69A221DE5B000005C4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19ABD69B221DE5B000005C4A /* Build configuration list for PBXNativeTarget "Audio Tech SpikeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ABD69C221DE5B000005C4A /* Debug */,
+				19ABD69D221DE5B000005C4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19ABD69E221DE5B000005C4A /* Build configuration list for PBXNativeTarget "Audio Tech SpikeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19ABD69F221DE5B000005C4A /* Debug */,
+				19ABD6A0221DE5B000005C4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19ABD668221DE5AF00005C4A /* Project object */;
+}
