@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19A40165221F4131000E55C0 /* AudioTechSpike.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19A40163221F4131000E55C0 /* AudioTechSpike.xcdatamodeld */; };
 		19ABD674221DE5AF00005C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABD673221DE5AF00005C4A /* AppDelegate.swift */; };
 		19ABD676221DE5AF00005C4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABD675221DE5AF00005C4A /* ViewController.swift */; };
 		19ABD679221DE5AF00005C4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19ABD677221DE5AF00005C4A /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19A40164221F4131000E55C0 /* AudioTechSpike.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AudioTechSpike.xcdatamodel; sourceTree = "<group>"; };
 		19ABD670221DE5AF00005C4A /* Audio Tech Spike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Audio Tech Spike.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19ABD673221DE5AF00005C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19ABD675221DE5AF00005C4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				19ABD67A221DE5B000005C4A /* Assets.xcassets */,
 				19ABD67C221DE5B000005C4A /* LaunchScreen.storyboard */,
 				19ABD67F221DE5B000005C4A /* Info.plist */,
+				19A40163221F4131000E55C0 /* AudioTechSpike.xcdatamodeld */,
 			);
 			path = "Audio Tech Spike";
 			sourceTree = "<group>";
@@ -193,6 +196,11 @@
 				TargetAttributes = {
 					19ABD66F221DE5AF00005C4A = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					19ABD683221DE5B000005C4A = {
 						CreatedOnToolsVersion = 10.2;
@@ -256,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19A40165221F4131000E55C0 /* AudioTechSpike.xcdatamodeld in Sources */,
 				19ABD676221DE5AF00005C4A /* ViewController.swift in Sources */,
 				19ABD674221DE5AF00005C4A /* AppDelegate.swift in Sources */,
 			);
@@ -586,6 +595,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		19A40163221F4131000E55C0 /* AudioTechSpike.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				19A40164221F4131000E55C0 /* AudioTechSpike.xcdatamodel */,
+			);
+			currentVersion = 19A40164221F4131000E55C0 /* AudioTechSpike.xcdatamodel */;
+			path = AudioTechSpike.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 19ABD668221DE5AF00005C4A /* Project object */;
 }

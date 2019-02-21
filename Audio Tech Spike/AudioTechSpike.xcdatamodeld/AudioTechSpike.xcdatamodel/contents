@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.87.2" systemVersion="18D42" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Episode" representedClassName="Episode" syncable="YES" codeGenerationType="class">
+        <attribute name="audioUrl" optional="YES" attributeType="URI" syncable="YES"/>
+        <attribute name="broadcastOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="guid" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hourNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="playState" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="progress" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoUrl" optional="YES" attributeType="URI" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Episode" positionX="-45" positionY="0" width="128" height="180"/>
+    </elements>
+</model>
