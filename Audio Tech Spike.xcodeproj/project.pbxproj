@@ -15,6 +15,8 @@
 		19ABD67E221DE5B000005C4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19ABD67C221DE5B000005C4A /* LaunchScreen.storyboard */; };
 		19ABD689221DE5B000005C4A /* Audio_Tech_SpikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABD688221DE5B000005C4A /* Audio_Tech_SpikeTests.swift */; };
 		19ABD694221DE5B000005C4A /* Audio_Tech_SpikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABD693221DE5B000005C4A /* Audio_Tech_SpikeUITests.swift */; };
+		B427BEAA222457FC00527CB5 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = B427BEA9222457FC00527CB5 /* Cartfile */; };
+		B427BEAF22245B3100527CB5 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B427BEAE22245B3100527CB5 /* SwiftHTTP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		19ABD68F221DE5B000005C4A /* Audio Tech SpikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Audio Tech SpikeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19ABD693221DE5B000005C4A /* Audio_Tech_SpikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio_Tech_SpikeUITests.swift; sourceTree = "<group>"; };
 		19ABD695221DE5B000005C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B427BEA9222457FC00527CB5 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Cartfile; sourceTree = "<group>"; };
+		B427BEAC22245AB400527CB5 /* SwiftHTTP */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftHTTP; path = Carthage/Checkouts/SwiftHTTP; sourceTree = "<group>"; };
+		B427BEAE22245B3100527CB5 /* SwiftHTTP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHTTP.framework; path = Carthage/Build/iOS/SwiftHTTP.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B427BEAF22245B3100527CB5 /* SwiftHTTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +85,12 @@
 		19ABD667221DE5AF00005C4A = {
 			isa = PBXGroup;
 			children = (
+				B427BEA9222457FC00527CB5 /* Cartfile */,
 				19ABD672221DE5AF00005C4A /* Audio Tech Spike */,
 				19ABD687221DE5B000005C4A /* Audio Tech SpikeTests */,
 				19ABD692221DE5B000005C4A /* Audio Tech SpikeUITests */,
 				19ABD671221DE5AF00005C4A /* Products */,
+				B427BEAB22245AB400527CB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +134,15 @@
 				19ABD695221DE5B000005C4A /* Info.plist */,
 			);
 			path = "Audio Tech SpikeUITests";
+			sourceTree = "<group>";
+		};
+		B427BEAB22245AB400527CB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B427BEAE22245B3100527CB5 /* SwiftHTTP.framework */,
+				B427BEAC22245AB400527CB5 /* SwiftHTTP */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +257,7 @@
 				19ABD67E221DE5B000005C4A /* LaunchScreen.storyboard in Resources */,
 				19ABD67B221DE5B000005C4A /* Assets.xcassets in Resources */,
 				19ABD679221DE5AF00005C4A /* Main.storyboard in Resources */,
+				B427BEAA222457FC00527CB5 /* Cartfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +460,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25D454MM3P;
+				DEVELOPMENT_TEAM = XUPALJXWTF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Audio Tech Spike/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -460,7 +482,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 25D454MM3P;
+				DEVELOPMENT_TEAM = XUPALJXWTF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Audio Tech Spike/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

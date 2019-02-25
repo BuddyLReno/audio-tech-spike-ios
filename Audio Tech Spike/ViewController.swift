@@ -8,8 +8,10 @@
 
 import UIKit
 import AVFoundation
+import Foundation
 import MediaPlayer
 import CoreData
+import SwiftHTTP
 
 class ViewController: UIViewController {
     //MARK: Properties
@@ -21,10 +23,12 @@ class ViewController: UIViewController {
     var elapsedEmitter: Timer?
     var queueIndex: Int = 0
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let params = ["device": "ios", "deviceName" : "SwiftHTTP", "feedback": "Hello World", "userAgent": "Fake User Agemt", "osVersion": "12.2", "deviceId": "1234567890", "email": "spencer.jameson@daveramsey.com"]
+        HTTP.POST("https://www.daveramsey.com/show/api/feedback/submit", parameters: params) { response in
+            //do things...
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -134,7 +138,6 @@ class ViewController: UIViewController {
                 print("Could not save. \(error), \(error.userInfo)")
             }
         }
-        
         playRemoteFile()
     }
     
