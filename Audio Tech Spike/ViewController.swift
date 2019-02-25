@@ -9,7 +9,6 @@
 import UIKit
 import AVFoundation
 import MediaPlayer
-import CoreData
 
 class ViewController: UIViewController {
     //MARK: Properties
@@ -17,33 +16,39 @@ class ViewController: UIViewController {
     @IBOutlet weak var mealNameLabel: UILabel!
     var avQueuePlayer: AVQueuePlayer?
     var playerItems: [AVPlayerItem] = []
-    var playerMetadata: [NSManagedObject] = []
+    var playerMetadata: [Episode] = []
     var elapsedEmitter: Timer?
     var queueIndex: Int = 0
+    var db: SQLiteDatabase?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
-        
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Episode")
-        
+        var fileUrl: URL?
         do {
-            playerMetadata = try managedContext.fetch(fetchRequest)
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
+            fileUrl = try SQLiteDatabase.createDB()
+        } catch let error as Error {
+            print("Error creating DB: \(error)")
         }
+
+        do {
+            db = try SQLiteDatabase.open(path: fileUrl?.absoluteString ?? "")
+            print("Successfully opened db connection")
+        } catch let error as Error {
+            print("Unable to open database.")
+        }
+
+        let episode = db?.episode(id: 1)
+        print(episode)
+        
+//        setupDefaultData()
     }
     
     //MARK: Actions
@@ -52,88 +57,11 @@ class ViewController: UIViewController {
         
         playerItems.append(AVPlayerItem(url: URL(string: "https://traffic.libsyn.com/secure/draudioarchives/02202019_the_dave_ramsey_show_archive_2.mp3?dest-id=412720")!))
         
-        playerItems.append(AVPlayerItem(url: URL(string: "https://traffic.libsyn.com/secure/draudioarchives/02202019_the_dave_ramsey_show_archive_3.mp3?dest-id=412720")!))
+//        playerItems.append(AVPlayerItem(url: URL(string: "https://traffic.libsyn.com/secure/draudioarchives/02202019_the_dave_ramsey_show_archive_3.mp3?dest-id=412720")!))
+//
+//        playerItems.append(AVPlayerItem(url: URL(string: "https://traffic.libsyn.com/secure/draudioarchives/02192019_the_dave_ramsey_show_archive_1.mp3?dest-id=412720")!))
         
-        playerItems.append(AVPlayerItem(url: URL(string: "https://traffic.libsyn.com/secure/draudioarchives/02192019_the_dave_ramsey_show_archive_1.mp3?dest-id=412720")!))
         
-        if (playerMetadata.count <= 0) {
-            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-                return
-            }
-            
-            let managedContext = appDelegate.persistentContainer.viewContext
-            
-            let entity = NSEntityDescription.entity(forEntityName: "Episode", in: managedContext)!
-            
-            let episode1 = NSManagedObject(entity: entity, insertInto: managedContext)
-            let episode2 = NSManagedObject(entity: entity, insertInto: managedContext)
-            let episode3 = NSManagedObject(entity: entity, insertInto: managedContext)
-            let episode4 = NSManagedObject(entity: entity, insertInto: managedContext)
-            
-            episode1.setValue(URL(string: "https://traffic.libsyn.com/secure/draudioarchives/02202019_the_dave_ramsey_show_archive_1.mp3?dest-id=412720"), forKeyPath: "audioUrl")
-            
-            let dateString = "2019-02-20T00:00:00Z" // the date string to be parsed
-            let df = DateFormatter()
-            df.locale = Locale(identifier: "en_US_POSIX")
-            df.dateFormat = "yyyy-MM-dd'T'HH:mm:ssX"
-            let date = df.date(from: dateString)
-            episode1.setValue(date, forKeyPath: "broadcastOn")
-            
-            episode1.setValue(2448, forKeyPath: "duration")
-            episode1.setValue(UUID(uuidString: "92032ee108a745408a61bc198e9ee862"), forKeyPath: "guid")
-            episode1.setValue(1, forKeyPath: "hourNumber")
-            episode1.setValue(0, forKeyPath: "playState")
-            episode1.setValue(0, forKeyPath: "progress")
-            episode1.setValue("Do You Have Too Much Invested in Vehicles?", forKeyPath: "title")
-            episode1.setValue(URL(string: "https://www.youtube.com/watch?v=fFKnn1XG7V0&t=1"), forKeyPath: "videoUrl")
-            
-            episode2.setValue(URL(string: "https://traffic.libsyn.com/secure/draudioarchives/02202019_the_dave_ramsey_show_archive_2.mp3?dest-id=412720"), forKeyPath: "audioUrl")
-            
-            episode2.setValue(2441, forKeyPath: "duration")
-            episode2.setValue(UUID(uuidString: "64b76488d9d74d5293f256bbde2d9329"), forKeyPath: "guid")
-            episode2.setValue(2, forKeyPath: "hourNumber")
-            episode2.setValue(0, forKeyPath: "playState")
-            episode2.setValue(0, forKeyPath: "progress")
-            episode2.setValue("Keep Your Car and Pay It Off in 2 Years", forKeyPath: "title")
-            episode2.setValue(URL(string: "https://www.youtube.com/watch?v=fFKnn1XG7V0&t=3601"), forKeyPath: "videoUrl")
-            
-            episode3.setValue(URL(string: "https://traffic.libsyn.com/secure/draudioarchives/02202019_the_dave_ramsey_show_archive_3.mp3?dest-id=412720"), forKeyPath: "audioUrl")
-            
-            episode3.setValue(2441, forKeyPath: "duration")
-            episode3.setValue(UUID(uuidString: "520884dbf4e4455c862f6e6b66b54aad"), forKeyPath: "guid")
-            episode3.setValue(3, forKeyPath: "hourNumber")
-            episode3.setValue(0, forKeyPath: "playState")
-            episode3.setValue(0, forKeyPath: "progress")
-            episode3.setValue("Dramatic Change Leads to Dramatic Wealth", forKeyPath: "title")
-            episode3.setValue(URL(string: "https://www.youtube.com/watch?v=fFKnn1XG7V0&t=7201"), forKeyPath: "videoUrl")
-            
-            episode4.setValue(URL(string: "https://traffic.libsyn.com/secure/draudioarchives/02192019_the_dave_ramsey_show_archive_1.mp3?dest-id=412720"), forKeyPath: "audioUrl")
-            
-            let dateString2 = "2019-02-19T00:00:00Z" // the date string to be parsed
-            let df2 = DateFormatter()
-            df2.locale = Locale(identifier: "en_US_POSIX")
-            df2.dateFormat = "yyyy-MM-dd'T'HH:mm:ssX"
-            let date2 = df2.date(from: dateString2)
-            episode1.setValue(date2, forKeyPath: "broadcastOn")
-            
-            episode4.setValue(2448, forKeyPath: "duration")
-            episode4.setValue(UUID(uuidString: "eed06a9bca6a4e729510771ddc76fbf3"), forKeyPath: "guid")
-            episode4.setValue(1, forKeyPath: "hourNumber")
-            episode4.setValue(0, forKeyPath: "playState")
-            episode4.setValue(0, forKeyPath: "progress")
-            episode4.setValue("Marrying Someone With a Lot of Debt", forKeyPath: "title")
-            episode4.setValue(URL(string: "https://www.youtube.com/watch?v=0Qwt5ksf0w0&t=1"), forKeyPath: "videoUrl")
-            
-            do {
-                try managedContext.save()
-                playerMetadata.append(episode1)
-                playerMetadata.append(episode2)
-                playerMetadata.append(episode3)
-                playerMetadata.append(episode4)
-            } catch let error as NSError {
-                print("Could not save. \(error), \(error.userInfo)")
-            }
-        }
         
         playRemoteFile()
     }
@@ -153,11 +81,11 @@ class ViewController: UIViewController {
             
             avQueuePlayer?.playImmediately(atRate: 5.0)
             
-            mealNameLabel.text = playerMetadata[queueIndex].value(forKeyPath: "title") as! String
+            mealNameLabel.text = playerMetadata[queueIndex].title
             
             startElapsedEmitter()
             setupRemoteCommandCenter()
-            setupNowPlaying(trackName: playerMetadata[queueIndex].value(forKeyPath: "title") as! String)
+            setupNowPlaying(trackName: playerMetadata[queueIndex].title as! String)
             
         } catch {
             print(error)
@@ -187,7 +115,7 @@ class ViewController: UIViewController {
         
         nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = avQueuePlayer?.currentItem?.currentTime().seconds
         nowPlayingInfo[MPMediaItemPropertyPlaybackDuration] = avQueuePlayer?.currentItem?.duration.seconds
-        nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackRate] = 5.0
+        nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackRate] = 3.0
         
         //Set metadata
         MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
@@ -205,7 +133,7 @@ class ViewController: UIViewController {
     }
     
     func mediaControlsPlay(event: MPRemoteCommandEvent) -> MPRemoteCommandHandlerStatus  {
-        self.avQueuePlayer?.playImmediately(atRate: 5.0)
+        self.avQueuePlayer?.playImmediately(atRate: 3.0)
         return .success
     }
     
@@ -217,12 +145,80 @@ class ViewController: UIViewController {
     @objc func playerReachedEnd(notification: NSNotification) {
         queueIndex += 1
         
-        mealNameLabel.text = playerMetadata[queueIndex].value(forKeyPath: "title") as! String
-        setupNowPlaying(trackName: playerMetadata[queueIndex].value(forKeyPath: "title") as! String)
+        var episode: Episode? = db?.episode(id: 1)
+        episode?.progress = 100
+        episode?.id = 1
+        
+        do {
+            try db?.updateEpisode(episode: episode!)
+        } catch let error as Error {
+            print("Problem updating record: \(error)")
+        }
+        
+        
+        mealNameLabel.text = playerMetadata[queueIndex].title as! String
+        setupNowPlaying(trackName: playerMetadata[queueIndex].title as! String)
     }
     
     @objc func stalledPlayback(notification: NSNotification) {
-        avQueuePlayer?.playImmediately(atRate: 5.0)
+        avQueuePlayer?.playImmediately(atRate: 3.0)
+    }
+    
+    func setupDefaultData() {
+        var fileUrl: URL?
+        do {
+            fileUrl = try SQLiteDatabase.createDB()
+        } catch let error as Error {
+            print("Error creating DB: \(error)")
+        }
+        
+        do {
+            db = try SQLiteDatabase.open(path: fileUrl?.absoluteString ?? "")
+            print("Successfully opened db connection")
+        } catch let error as Error {
+            print("Unable to open database.")
+        }
+        
+        do {
+            try db?.dropTable(table: Episode.self)
+            print("Dropped table")
+        } catch let error as Error {
+            print("Error dropping db: \(error)")
+        }
+        
+        do {
+            try db?.createTable(table: Episode.self)
+            print("created table")
+        } catch {
+            print(db?.errorMessage)
+        }
+            
+            let episode1 = Episode(id: 1,
+                                   hourNumber: 1,
+                                   title: "Do You Have Too Much Invested in Vehicles?",
+                                   audioUrl:  "https://traffic.libsyn.com/secure/draudioarchives/02202019_the_dave_ramsey_show_archive_1.mp3?dest-id=412720",
+                duration: 2448, progress: 0)
+            
+            let episode2 = Episode(
+                id: 2,
+                hourNumber: 2,
+                title: "Keep Your Car and Pay It Off in 2 Years",
+                audioUrl:  "https://traffic.libsyn.com/secure/draudioarchives/02202019_the_dave_ramsey_show_archive_2.mp3?dest-id=412720",
+                duration: 2441, progress: 0)
+            
+            
+            
+            
+            
+            do {
+                try db?.insertEpisode(episode: episode1)
+                try db?.insertEpisode(episode: episode2)
+                playerMetadata.append(episode1)
+                playerMetadata.append(episode2)
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+        
     }
 }
 

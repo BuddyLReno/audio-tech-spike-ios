@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19A40165221F4131000E55C0 /* AudioTechSpike.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19A40163221F4131000E55C0 /* AudioTechSpike.xcdatamodeld */; };
+		1994968022242B9100B741CC /* Episode.model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1994967F22242B9100B741CC /* Episode.model.swift */; };
+		199496852224428300B741CC /* SqlDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199496842224428300B741CC /* SqlDatabase.swift */; };
 		19ABD674221DE5AF00005C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABD673221DE5AF00005C4A /* AppDelegate.swift */; };
 		19ABD676221DE5AF00005C4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABD675221DE5AF00005C4A /* ViewController.swift */; };
 		19ABD679221DE5AF00005C4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19ABD677221DE5AF00005C4A /* Main.storyboard */; };
 		19ABD67B221DE5B000005C4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19ABD67A221DE5B000005C4A /* Assets.xcassets */; };
 		19ABD67E221DE5B000005C4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19ABD67C221DE5B000005C4A /* LaunchScreen.storyboard */; };
-		19ABD689221DE5B000005C4A /* Audio_Tech_SpikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABD688221DE5B000005C4A /* Audio_Tech_SpikeTests.swift */; };
-		19ABD694221DE5B000005C4A /* Audio_Tech_SpikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABD693221DE5B000005C4A /* Audio_Tech_SpikeUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19A40164221F4131000E55C0 /* AudioTechSpike.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AudioTechSpike.xcdatamodel; sourceTree = "<group>"; };
+		1994967F22242B9100B741CC /* Episode.model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.model.swift; sourceTree = "<group>"; };
+		199496842224428300B741CC /* SqlDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlDatabase.swift; sourceTree = "<group>"; };
 		19ABD670221DE5AF00005C4A /* Audio Tech Spike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Audio Tech Spike.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19ABD673221DE5AF00005C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19ABD675221DE5AF00005C4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,11 +44,7 @@
 		19ABD67D221DE5B000005C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19ABD67F221DE5B000005C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19ABD684221DE5B000005C4A /* Audio Tech SpikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Audio Tech SpikeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		19ABD688221DE5B000005C4A /* Audio_Tech_SpikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio_Tech_SpikeTests.swift; sourceTree = "<group>"; };
-		19ABD68A221DE5B000005C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19ABD68F221DE5B000005C4A /* Audio Tech SpikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Audio Tech SpikeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		19ABD693221DE5B000005C4A /* Audio_Tech_SpikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio_Tech_SpikeUITests.swift; sourceTree = "<group>"; };
-		19ABD695221DE5B000005C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +72,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19A401A722205D02000E55C0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1994967F22242B9100B741CC /* Episode.model.swift */,
+				199496842224428300B741CC /* SqlDatabase.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		19ABD667221DE5AF00005C4A = {
 			isa = PBXGroup;
 			children = (
+				19A401A722205D02000E55C0 /* Data */,
 				19ABD672221DE5AF00005C4A /* Audio Tech Spike */,
-				19ABD687221DE5B000005C4A /* Audio Tech SpikeTests */,
-				19ABD692221DE5B000005C4A /* Audio Tech SpikeUITests */,
 				19ABD671221DE5AF00005C4A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,27 +109,8 @@
 				19ABD67A221DE5B000005C4A /* Assets.xcassets */,
 				19ABD67C221DE5B000005C4A /* LaunchScreen.storyboard */,
 				19ABD67F221DE5B000005C4A /* Info.plist */,
-				19A40163221F4131000E55C0 /* AudioTechSpike.xcdatamodeld */,
 			);
 			path = "Audio Tech Spike";
-			sourceTree = "<group>";
-		};
-		19ABD687221DE5B000005C4A /* Audio Tech SpikeTests */ = {
-			isa = PBXGroup;
-			children = (
-				19ABD688221DE5B000005C4A /* Audio_Tech_SpikeTests.swift */,
-				19ABD68A221DE5B000005C4A /* Info.plist */,
-			);
-			path = "Audio Tech SpikeTests";
-			sourceTree = "<group>";
-		};
-		19ABD692221DE5B000005C4A /* Audio Tech SpikeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				19ABD693221DE5B000005C4A /* Audio_Tech_SpikeUITests.swift */,
-				19ABD695221DE5B000005C4A /* Info.plist */,
-			);
-			path = "Audio Tech SpikeUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +249,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19A40165221F4131000E55C0 /* AudioTechSpike.xcdatamodeld in Sources */,
 				19ABD676221DE5AF00005C4A /* ViewController.swift in Sources */,
+				199496852224428300B741CC /* SqlDatabase.swift in Sources */,
+				1994968022242B9100B741CC /* Episode.model.swift in Sources */,
 				19ABD674221DE5AF00005C4A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,7 +260,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19ABD689221DE5B000005C4A /* Audio_Tech_SpikeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +267,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19ABD694221DE5B000005C4A /* Audio_Tech_SpikeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +433,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.daveramsey.audio-tech-spike.Audio-Tech-Spike";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,6 +452,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.daveramsey.audio-tech-spike.Audio-Tech-Spike";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -595,19 +581,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		19A40163221F4131000E55C0 /* AudioTechSpike.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				19A40164221F4131000E55C0 /* AudioTechSpike.xcdatamodel */,
-			);
-			currentVersion = 19A40164221F4131000E55C0 /* AudioTechSpike.xcdatamodel */;
-			path = AudioTechSpike.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 19ABD668221DE5AF00005C4A /* Project object */;
 }
